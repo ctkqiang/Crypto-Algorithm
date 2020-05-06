@@ -16,6 +16,13 @@
                   "request": "launch",
                   "mainClass": "src.__main",
                   "projectName": "CryptoJava_6f15a5dc"
-            }
+            },
+            {
+                  "type": "java",
+                  "name": "External Oracle Java Debug  Current File",
+                  "request": "launch",
+                  "console": "externalTerminal",
+                  "mainClass": "${file}"
+            },
       ]
 }
