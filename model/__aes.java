@@ -1,5 +1,15 @@
 package model;
 
+/**
+ * Copyright 2020 © John Melody Me
+ * Licensed under the John Melody Me, Version 1.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 import java.io.UnsupportedEncodingException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
@@ -50,13 +60,13 @@ public class __aes {
       }
 
       // @Method: Decryption:
-      public static String __decrypt(String __string_to_decrypt,  String __secret) {
+      public static String __decrypt(String __string_to_decrypt, String __secret) {
             try {
                   String __transformation;
                   __transformation = "AES/ECB/PKCS5PADDING";
                   _setKey(__secret);
                   Cipher __cipher = Cipher.getInstance(__transformation);
-                  __cipher.init(Cipher.DECRYPT_MODE,  __secret_key);
+                  __cipher.init(Cipher.DECRYPT_MODE, __secret_key);
                   return new String(__cipher.doFinal(Base64.getDecoder().decode(__string_to_decrypt)));
             } catch (Exception exception) {
                   System.out.println("Error while decrypting: " + exception.toString());
