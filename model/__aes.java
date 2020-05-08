@@ -27,9 +27,9 @@ public class __aes {
             String __SHA_Alogirthm, __key_specification;
             int __hashes_length;
             __SHA = null;
-            __SHA_Alogirthm = "SHA-256";
+            __SHA_Alogirthm = "SHA-512";
             __key_specification = "AES";
-            __hashes_length = 16;
+            __hashes_length = 32;
 
             try {
                   __key = __mykey.getBytes("UTF-8");

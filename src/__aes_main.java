@@ -15,9 +15,10 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Random;
 import java.util.Scanner;
+
 import model.__aes;
 
-public class __main {
+public class __aes_main {
       private static String __secret_key, __user_input, __original_string;
       private static String __encrypted_string, __decrypted_string;
       private static Scanner __get_user_input;
@@ -39,7 +40,6 @@ public class __main {
 
             // :...Save Output
             __save_output();
-
       }
 
       private static void __welcome_method() {
@@ -57,7 +57,7 @@ public class __main {
 
       private static void __save_output() {
             try {
-                  __file = new File("output/" + new Random().nextInt(10) + "output.txt");
+                  __file = new File("output/aes/" + new Random().nextInt(10) + "output.txt");
                   __fileWriter = new FileWriter(__file);
                   __fileWriter.write(
                               "Performed at " + java.time.LocalDate.now() + " " + java.time.LocalTime.now() + "\n\n");
@@ -66,9 +66,13 @@ public class __main {
                   __fileWriter.write("The Encrypted Content: " + __encrypted_string + "\n");
                   __fileWriter.write("The Decrypted Content: " + __decrypted_string + "\n");
                   __fileWriter.close();
-                  System.gc();
+                  __clearMemory();
             } catch (final IOException ioException) {
                   System.out.println("Exception: " + ioException.toString());
             }
+      }
+
+      protected static void __clearMemory() {
+            System.gc();
       }
 }

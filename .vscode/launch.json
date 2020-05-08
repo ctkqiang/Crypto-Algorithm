@@ -6,6 +6,13 @@
       "configurations": [
             {
                   "type": "java",
+                  "name": "CodeLens (Launch) - __SHA_512_Encrypt",
+                  "request": "launch",
+                  "mainClass": "src.encryption.__SHA_512_Encrypt",
+                  "projectName": "CryptoJava_6f15a5dc"
+            },
+            {
+                  "type": "java",
                   "name": "Java Debug  Current File",
                   "request": "launch",
                   "mainClass": "${file}"
@@ -23,6 +30,6 @@
                   "request": "launch",
                   "console": "externalTerminal",
                   "mainClass": "${file}"
-            },
+            }
       ]
 }

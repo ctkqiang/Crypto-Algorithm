@@ -12,7 +12,7 @@ public class __crypto_util {
       // private static String __secret_key = "ajklsasdkewpiuercjnnmdpop2w99s=";
       private static String __cipher_instance = "AES/CBC/PKCS5Paddin";
       // private static String __iv = "hashes";
-      private static String __encryption_type = "MD6";
+      private static String __encryption_type = "SHA512";
 
       public static String __encrypt_binary_file(String __key, String __iv, String __message) throws Exception {
             MessageDigest __MessageDigest = MessageDigest.getInstance(__encryption_type);
