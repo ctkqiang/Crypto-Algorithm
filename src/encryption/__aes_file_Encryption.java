@@ -49,7 +49,7 @@ public class __aes_file_Encryption {
             FileInputStream __inFile = new FileInputStream(__user_input);
 
             // Encrypted File:
-            FileOutputStream __outFile = new FileOutputStream("encryptedFile.encrypted"); // .des
+            FileOutputStream __outFile = new FileOutputStream("output/file/encryptedFile.des");
 
             // Set Password for encrypted File:
             __user_set_password = new Scanner(System.in);
@@ -64,7 +64,7 @@ public class __aes_file_Encryption {
             __secure_random = new SecureRandom();
             __secure_random.nextBytes(__salt);
 
-            FileOutputStream __saltOutput = new FileOutputStream("salt.enc");
+            FileOutputStream __saltOutput = new FileOutputStream("output/file/salt.enc");
             __saltOutput.write(__salt);
             __saltOutput.close();
 
@@ -91,7 +91,7 @@ public class __aes_file_Encryption {
              *          breaches while initialising the `__cipher` then file to stor the
              *          `iv`.
              */
-            FileOutputStream __iv_output = new FileOutputStream("iv_output.enc");
+            FileOutputStream __iv_output = new FileOutputStream("output/file/iv_output.enc");
             __iv = __algorithm_parameters.getParameterSpec(IvParameterSpec.class).getIV();
             __iv_output.write(__iv);
             __iv_output.close();
