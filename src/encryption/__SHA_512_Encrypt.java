@@ -5,10 +5,10 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Random;
 import java.util.Scanner;
-
 import model.__sha_512_model;
 
 public class __SHA_512_Encrypt {
+    protected static String __secretKey = "this_is_@_SECRET_kEy#";
     private static Scanner __get_user_input;
     private static String __user_input, __encrypted_string;
     private static File __file;
@@ -19,7 +19,8 @@ public class __SHA_512_Encrypt {
         // Get user input:
         __get_user_input = new Scanner(System.in);
         __user_input = __get_user_input.nextLine();
-        __encrypted_string = __sha_512_model.__encryptString(__user_input);
+        __encrypted_string = __sha_512_model.__encrypt(__user_input, __secretKey);
+        System.out.println("Original Content: " + __user_input);
         System.out.println("Encrypted String: " + __encrypted_string);
         __SaveTheOutput();
     }
