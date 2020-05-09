@@ -24,7 +24,7 @@ public class __SHA_512_Decrypt {
       private static FileWriter __fileWriter;
 
       public static void main(final String[] args) {
-            System.out.println("{ SHA 512 } \nEnter text for derypt:");
+            System.out.println("{ SHA 512 } \nEnter text for derypt: ");
             // Get user input:
             __get_user_input = new Scanner(System.in);
             __user_input = __get_user_input.nextLine();
