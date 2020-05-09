@@ -10,7 +10,7 @@ import model.__sha_512_model;
 public class __SHA_512_Decrypt {
       protected static String __secretKey = "this_is_@_SECRET_kEy#";
       private static Scanner __get_user_input;
-      private static String __user_input, __decrypted_string;
+      private static String __user_input, __decrypted_string, __post_decrypted_string;
       private static File __file;
       private static FileWriter __fileWriter;
 
@@ -19,7 +19,8 @@ public class __SHA_512_Decrypt {
             // Get user input:
             __get_user_input = new Scanner(System.in);
             __user_input = __get_user_input.nextLine();
-            __decrypted_string = __sha_512_model.__decrypt(__user_input, __secretKey);
+            __post_decrypted_string = __sha_512_model.__decrypt(__user_input, __secretKey);
+            __decrypted_string = __sha_512_model.__decrypt(__post_decrypted_string, __secretKey);
             System.out.println("Encrypted Content: " + __user_input);
             System.out.println("Decrypted String: " + __decrypted_string);
             __SaveTheOutput();
