@@ -45,13 +45,13 @@ public class __aes_file_Decryption {
              *          transferring the [salt] , password and iv_.
              */
 
-            final FileInputStream __input_salt_file = new FileInputStream(__salt_file);
+            FileInputStream __input_salt_file = new FileInputStream(__salt_file);
             __salt = new byte[8];
             __input_salt_file.read(__salt);
             __input_salt_file.close();
 
             // Read Iv:
-            final FileInputStream __input_iv_file = new FileInputStream(__iv_file);
+            FileInputStream __input_iv_file = new FileInputStream(__iv_file);
             __iv = new byte[16];
             __input_iv_file.read(__iv);
             __input_iv_file.close();
@@ -64,16 +64,16 @@ public class __aes_file_Decryption {
             // File decryption:
             __cipher = Cipher.getInstance(__algorithm);
             __cipher.init(Cipher.DECRYPT_MODE, __secret, new IvParameterSpec(__iv));
-            final FileInputStream __input_file = new FileInputStream(__user_file_input);
-            final FileOutputStream __output_file = new FileOutputStream(__output_path);
-            final byte [] _in = new byte[64];
+            FileInputStream __input_file = new FileInputStream(__user_file_input);
+            FileOutputStream __output_file = new FileOutputStream(__output_path);
+            byte[] _in = new byte[64];
             while ((_read = __input_file.read(_in)) != -1) {
                   __output = __cipher.update(_in, 0, _read);
                   if (__output != null) {
                         __output_file.write(__output);
                   }
             }
-            final byte [] _output = __cipher.doFinal();
+            byte[] _output = __cipher.doFinal();
             if (_output != null) {
                   __output_file.write(__output);
             }

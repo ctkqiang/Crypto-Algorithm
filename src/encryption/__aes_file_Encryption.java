@@ -41,6 +41,7 @@ public class __aes_file_Encryption {
 
       public static void main(final String[] args) throws Exception {
             System.out.println("{ SHA 512 } \nEnter File for encryption: ");
+            System.out.println("Enter Password: ");
             // Get User Input:
             __get_user_input = new Scanner(System.in);
             __user_input = __get_user_input.nextLine();

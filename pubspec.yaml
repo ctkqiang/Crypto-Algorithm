@@ -1,0 +1,17 @@
+name: encryption
+version: 1.0.0
+description: Peer to peer encryption
+author: John Melody Me <johnmelodyme@yandex.com>
+homepage: https://johnmelodyme.github.io/
+
+executables:
+  encrypt:
+
+environment:
+  sdk: ">=2.2.2 <3.0.0"
+
+dependencies:
+  aes_crypt: ^0.1.1
+
+dev_dependencies:
+  test: ^1.14.3
