@@ -25,7 +25,6 @@ class __function {
     var _file_dir = stdin.readLineSync();
     _crypt.setOverwriteMode(AesCryptOwMode.on);
     _crypt.encryptFileSync(_file_dir, "encrypted.aes");
-  
   }
 
   void __decrypt() {
