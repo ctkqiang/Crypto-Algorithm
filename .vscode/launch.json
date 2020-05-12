@@ -5,6 +5,13 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "type": "java",
+      "name": "CodeLens (Launch) - aescrypto",
+      "request": "launch",
+      "mainClass": "src.encryption.aescrypto",
+      "projectName": "CryptoJava_6f15a5dc"
+    },
+    {
       "name": "CLang (gdb) Launch",
       "type": "cppdbg",
       "request": "launch",

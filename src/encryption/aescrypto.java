@@ -23,8 +23,8 @@ public class aescrypto {
       public static void main(String args[]) {
             final String __userInput, __password, __strToDecrypt;
 
-            System.out.println("{ SHA 512-AES } \nEnter text for derypt: ");
-            __password = "7721569137fca108d311fe33f42083a0e862907735c52076b376f6216998533c";
+            System.out.println("{ SHA 256-AES } \nEnter text for encrypt: ");
+            __password = "7721569pass3c";
             __user_input = new Scanner(System.in);
             __userInput = __user_input.nextLine();
             aescrypto._setKey(__password);
@@ -41,12 +41,12 @@ public class aescrypto {
             MessageDigest __SHA = null;
             try {
                   __key = __myKey.getBytes("UTF-8");
-                  System.out.println(__key.length);
+                  // System.out.println(__key.length);
                   __SHA = MessageDigest.getInstance(__algorithm);
                   __key = __SHA.digest(__key);
-                  __key = Arrays.copyOf(__key, 64); // (16{128}, (64{512}))
-                  System.out.println(__key.length);
-                  System.out.println(new String(__key, "UTF-8"));
+                  __key = Arrays.copyOf(__key, 32); // (8{64}), (16{128}, (32{256}), (64{512}), (128{1024}))
+                  // System.out.println(__key.length);
+                  // System.out.println(new String(__key, "UTF-8"));
                   __secret_key = new SecretKeySpec(__key, __encryption);
             } catch (NoSuchAlgorithmException noSuchAlgorithmException) {
                   noSuchAlgorithmException.printStackTrace();
