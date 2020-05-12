@@ -1,48 +1,68 @@
 {
-      // Use IntelliSense to learn about possible attributes.
-      // Hover to view descriptions of existing attributes.
-      // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
-      "version": "0.2.0",
-      "configurations": [
-            {
-                  "name": "Dart -- Debug",
-                  "type": "dart",
-                  "request": "launch",
-                  "program": "bin/main.dart"
-            },
-            {
-                  "type": "kotlin",
-                  "request": "launch",
-                  "name": "Kotlin Debug",
-                  "projectRoot": "${workspaceFolder}",
-                  "mainClass": "path.to.your.MainClassKt"
-            },
-            {
-                  "type": "java",
-                  "name": "CodeLens (Launch) - __SHA_512_Encrypt",
-                  "request": "launch",
-                  "mainClass": "src.encryption.__SHA_512_Encrypt",
-                  "projectName": "CryptoJava_6f15a5dc"
-            },
-            {
-                  "type": "java",
-                  "name": "Java Debug  Current File",
-                  "request": "launch",
-                  "mainClass": "${file}"
-            },
-            {
-                  "type": "java",
-                  "name": "Java Debug (Launch) -__main<CryptoJava_6f15a5dc>",
-                  "request": "launch",
-                  "mainClass": "src.__main",
-                  "projectName": "CryptoJava_6f15a5dc"
-            },
-            {
-                  "type": "java",
-                  "name": "External Oracle Java Debug  Current File",
-                  "request": "launch",
-                  "console": "externalTerminal",
-                  "mainClass": "${file}"
-            }
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "CLang (gdb) Launch",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "enter program name, for example ${workspaceFolder}/a.exe",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}",
+      "environment": [],
+      "externalConsole": false,
+      "MIMode": "gdb",
+      "miDebuggerPath": "/path/to/gdb",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
       ]
+    },
+    {
+      "name": "Dart -- Debug",
+      "type": "dart",
+      "request": "launch",
+      "program": "bin/main.dart"
+    },
+    {
+      "type": "kotlin",
+      "request": "launch",
+      "name": "Kotlin Debug",
+      "projectRoot": "${workspaceFolder}",
+      "mainClass": "path.to.your.MainClassKt"
+    },
+    {
+      "type": "java",
+      "name": "CodeLens (Launch) - __SHA_512_Encrypt",
+      "request": "launch",
+      "mainClass": "src.encryption.__SHA_512_Encrypt",
+      "projectName": "CryptoJava_6f15a5dc"
+    },
+    {
+      "type": "java",
+      "name": "Java Debug  Current File",
+      "request": "launch",
+      "mainClass": "${file}"
+    },
+    {
+      "type": "java",
+      "name": "Java Debug (Launch) -__main<CryptoJava_6f15a5dc>",
+      "request": "launch",
+      "mainClass": "src.__main",
+      "projectName": "CryptoJava_6f15a5dc"
+    },
+    {
+      "type": "java",
+      "name": "External Oracle Java Debug  Current File",
+      "request": "launch",
+      "console": "externalTerminal",
+      "mainClass": "${file}"
+    }
+  ]
 }
