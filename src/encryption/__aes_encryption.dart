@@ -33,6 +33,6 @@ class __function {
     _crypt.setPassword(_user_input);
     stdout.write("Input File decryption {path}: ");
     var _file_dir_decrypt = stdin.readLineSync();
-    _crypt.decryptFileSync(_file_dir_decrypt, "decrypted_file.txt");
+    _crypt.decryptFileSync(_file_dir_decrypt, "decrypted_file.png");
   }
 }
