@@ -39,13 +39,6 @@
       "program": "bin/main.dart"
     },
     {
-      "type": "kotlin",
-      "request": "launch",
-      "name": "Kotlin Debug",
-      "projectRoot": "${workspaceFolder}",
-      "mainClass": "path.to.your.MainClassKt"
-    },
-    {
       "type": "java",
       "name": "CodeLens (Launch) - __SHA_512_Encrypt",
       "request": "launch",
