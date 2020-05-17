@@ -12,7 +12,6 @@ public class __file_encryption {
       
       public static void main(String args[]) throws Exception {
             __onStart();
-
             __onDestroy();
       }
 

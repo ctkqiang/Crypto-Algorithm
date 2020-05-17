@@ -1,25 +1,26 @@
 package diffie_hellman;
 
+import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.OutputStream;
 import java.net.Socket;
 
 public class DiffieHellmanClient {
     protected static Socket __client_socket;
+    private static DataInputStream __dataInputStream;
     private static OutputStream __outputStreamToServer;
     private static DataOutputStream __dataOutputStream;
     private static String __PSTR, __GSTR, __ASTR;
     private static String __SERVER_NAME;
     private static int __PORT = 8088;
-    private static final int __p, __g, __a;
     private static double __ADASH, __SERVER_B;
 
-    public static void main(final String[] args) {
+    public static void main(String[] args) {
         try {
             // Key of client:
-            __p = 23;
-            __g = 9;
-            __a = 4;
+            int __p = 23;
+            int __g = 9;
+            int __a = 4;
 
             // Established the connection :
             System.out.println("Connected to ===> " + __SERVER_NAME + "on Port ===> " + __PORT);
@@ -43,8 +44,18 @@ public class DiffieHellmanClient {
 
             // Client's Private Key 
             System.out.println("From Client ==> Private Key ==> " + __a);
+
+            // Accepting the Data :
+            __dataInputStream = new DataInputStream(__client_socket.getInputStream());
+            __SERVER_B = Double.parseDouble(__dataInputStream.readUTF());
+            System.out.println("From Server ==> Public Key ==> " + __SERVER_B);
+
+            // ADASH CALCULATION :
+            __ADASH = ((Math.pow(__SERVER_B, __a)) % __p);
+            System.out.println("Secret Key to perform Symmetric Encryption ==> " + __ADASH);
+            __client_socket.close();
+
         } catch (Exception e) {
-            //TODO: handle exception
             e.printStackTrace();
         } 
     }

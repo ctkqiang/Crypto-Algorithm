@@ -6,6 +6,20 @@
   "configurations": [
     {
       "type": "java",
+      "name": "CodeLens (Launch) - DiffieHellmanClient",
+      "request": "launch",
+      "mainClass": "diffie_hellman.DiffieHellmanClient",
+      "projectName": "CryptoJava_6f15a5dc"
+    },
+    {
+      "type": "java",
+      "name": "CodeLens (Launch) - DiffieHellmanServer",
+      "request": "launch",
+      "mainClass": "diffie_hellman.DiffieHellmanServer",
+      "projectName": "CryptoJava_6f15a5dc"
+    },
+    {
+      "type": "java",
       "name": "CodeLens (Launch) - CryptographyProvider",
       "request": "launch",
       "mainClass": "CryptographyProvider",
