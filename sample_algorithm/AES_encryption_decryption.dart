@@ -37,7 +37,7 @@ class __get_user_input {
 class __cryptographic_algorithm_encryption {
   void __encryption() {
     stdout.write("Input Password: ");
-    var __password = stdin.readLineSync();
+    var __password = stdin.readLineSync(); 
     __crypt.setPassword(__password);
     stdout.write(
         "Input directory: [.txt, .jpg, .png, .mp3, .pdf, etc] for encryption: \n");

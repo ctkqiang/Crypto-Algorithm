@@ -1,7 +1,7 @@
 package src.encryption;
 
 /**
- * @Copyright:  2020 © John Melody Me
+ * @Copyright  2020 © John Melody Me
  * Licensed under the John Melody Me, Version 1.0 (the "License");
  * you may not use this file except in compliance with the License.
  * Unless required by applicable law or agreed to in writing, software
@@ -57,9 +57,9 @@ public class __aes_file_Encryption {
             __Password = __user_set_password.nextLine();
 
             /**
-             * @Method: Encode content with [salt], and will be sent to recipients securely
+             * @Method Encode content with [salt], and will be sent to recipients securely
              *          for decoding automatically and decryption.
-             * @Warning: pass, iv and salt should be transferred to the other end securely.
+             * @Warning pass, iv and salt should be transferred to the other end securely.
              */
             __salt = new byte[8];
             __secure_random = new SecureRandom();
@@ -70,12 +70,12 @@ public class __aes_file_Encryption {
             __saltOutput.close();
 
             /**
-             * @API: SecretKeyFactory refer
+             * @API SecretKeyFactory refer
              *       https://docs.oracle.com/javase/7/docs/api/javax/crypto/SecretKeyFactory.html
              *       KeySpec refer
              *       https://docs.oracle.com/javase/7/docs/api/java/security/spec/KeySpec.html
              * 
-             * @Param: https://docs.oracle.com/javase/7/docs/api/java/security/AlgorithmParameters.html
+             * @Param https://docs.oracle.com/javase/7/docs/api/java/security/AlgorithmParameters.html
              */
 
             __secretKeyFactory = SecretKeyFactory.getInstance(__padding);
