@@ -19,8 +19,8 @@ public class DiffieHellmanServer {
     private static double __client_P, __client_G, __client_A, __B, __BDASH;
     private static String __BSTR;
 
-    public static void main(String[] args) throws IOException {
-        try {
+    public static void main(String[] args) throws IOException { 
+        try { 
             __serverSocket = new ServerSocket(__port);
             __server = __serverSocket.accept();
 

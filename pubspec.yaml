@@ -12,6 +12,9 @@ environment:
 
 dependencies:
   aes_crypt: ^0.1.1
+  dh: ^0.1.0
 
 dev_dependencies:
+  enumerators: ^0.5.5
+  propcheck: ^0.5.1
   test: ^1.14.3

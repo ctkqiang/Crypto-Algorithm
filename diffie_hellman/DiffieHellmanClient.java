@@ -14,7 +14,7 @@ public class DiffieHellmanClient {
     private static String __SERVER_NAME;
     private static int __PORT = 8088;
     private static double __ADASH, __SERVER_B;
-
+    
     public static void main(String[] args) {
         try {
             // Key of client:
