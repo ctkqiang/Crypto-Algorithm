@@ -10,7 +10,6 @@ public class diffieHellmanlgorithm {
     public static void main(String args[]) {
         __user_enter_modulus = new Scanner(System.in);
         System.out.println("Enter a {modulus}: "); 
-
         p = __user_enter_modulus.nextInt();
         System.out.println("Enter primitive root of " + p); // lets say 7
         g = __user_enter_modulus.nextInt();
