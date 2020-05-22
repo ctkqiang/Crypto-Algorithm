@@ -1,4 +1,5 @@
-/bin
+/bin/HashCalculator
+/bin/哈希計算器安裝程序.exe
 /build
 /__pycache__
 /dist
