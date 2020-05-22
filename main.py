@@ -17,15 +17,12 @@ myfont = font.Font(family="KaiTi")
 input = tk.StringVar()
 filename = StringVar()
 sha256output = StringVar()
+sha512output = StringVar()
 
 sha1 = hashlib.sha1()
 sha256 = hashlib.sha256()
 sha512 = hashlib.sha512()
 md5 = hashlib.md5()
-
-
-
-
 
 def browsefile():
     filename.set(askopenfilename(initialdir="/",
@@ -37,6 +34,13 @@ def browsefile():
 
 def browsefilesha256():
     sha256output.set(askopenfilename(initialdir="/",
+                                     filetypes=(("Text File", "*.txt"),
+                                                ("All Files", "*.*")),
+                                     title="選擇文件"
+                                     ))
+                                    
+def browsefilesha512():
+    sha512output.set(askopenfilename(initialdir="/",
                                      filetypes=(("Text File", "*.txt"),
                                                 ("All Files", "*.*")),
                                      title="選擇文件"
@@ -63,6 +67,14 @@ def sha256():
     print(hash_obj, "SHA 256 哈希計算結果: ", sha256str)
     box.showinfo("SHA 256 哈希計算結果", sha256str)
 
+def sha512():
+    hash_obj = filename.get()
+    sha512 = hashlib.sha512(hash_obj.encode())
+    sha512str = sha512.hexdigest()
+    sha512str1 = sha512str.encode("utf-8")
+    sha512str2 = sha512str1.decode("utf-8")
+    print(hash_obj, "SHA 512 哈希計算結果: ", sha512str)
+    box.showinfo("SHA 512 哈希計算結果", sha512str)
 
 def exportData():
     data = open("hashes_output.txt", "w+")
@@ -106,11 +118,17 @@ FileLocation = tk.Label(window, text="SHA-1： ", bg="white").place(
 FileLocationsha256 = tk.Label(window, text="SHA-256: ", bg="white", justify=LEFT).place(
     x=12, y=50, width=84, height=24)
 
+FileLocationsha256 = tk.Label(window, text="SHA-512: ", bg="white", justify=LEFT).place(
+    x=12, y=82, width=84, height=24)
+
 entry = tk.Entry(window, textvariable=filename, bg="#FAFAFA", justify=LEFT).place(
     x=100, y=18, width=400, height=24)
 
 sha256entry = tk.Entry(window, textvariable=sha256output, bg="#FAFAFA", justify=LEFT).place(
     x=100, y=50, width=400, height=24)
+
+sha512entry = tk.Entry(window, textvariable=sha512output, bg="#FAFAFA", justify=LEFT).place(
+    x=100, y=82, width=400, height=24)
 
 browse = tk.Button(window, text="瀏覽", command=browsefile)
 browse.place(x=520, y=18, width=50, height=24)
@@ -127,6 +145,14 @@ browsefileforsha256.configure(bg="white")
 calculatesha256 = tk.Button(window, text="盤算", command=sha256)
 calculatesha256.place(x=580, y=50, width=57, height=24)
 calculatesha256.configure(bg="white")
+
+browse512 = tk.Button(window, text="瀏覽", command=browsefilesha512)
+browse512.place(x=520, y=82, width=50, height=24)
+browse512.configure(bg="white")
+
+calculatesha512 = tk.Button(window, text="盤算", command=sha512)
+calculatesha512.place(x=580, y=82, width=57, height=24)
+calculatesha512.configure(bg="white")
 
 window.config(menu=menu_bar)
 window.mainloop()
