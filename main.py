@@ -7,6 +7,15 @@ from tkinter.filedialog import askopenfilename
 from tkinter import filedialog as tkFileDialog
 import webbrowser as webservice
 
+from sys import platform
+if platform == "darwin":
+    from Foundation import NSBundle
+    bundle = NSBundle.mainBundle()
+    if bundle:
+        info = bundle.localizedInfoDictionary() or bundle.infoDictionary()
+        if info and info["CFBundleName"] == "Python":
+            info["CFBundleName"] = "哈希計算器"
+            
 window = Tk()
 window.resizable(width=False, height=False)
 window.configure(bg="white")
