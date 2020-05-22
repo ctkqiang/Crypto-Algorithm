@@ -16,7 +16,7 @@ labelframe1.configure(bg="white")
 myfont = font.Font(family="KaiTi")
 input = tk.StringVar()
 filename = StringVar()
-sha1output = StringVar()
+sha256output = StringVar()
 
 sha1 = hashlib.sha1()
 sha256 = hashlib.sha256()
@@ -24,12 +24,7 @@ sha512 = hashlib.sha512()
 md5 = hashlib.md5()
 
 
-# SHA 1
-hash_obj = filename.get()
-sha1 = hashlib.sha256(hash_obj.encode())
-estr = sha1.hexdigest()
-estr1 = estr.encode("utf-8")
-estr2 = estr1.decode("utf-8")
+
 
 
 def browsefile():
@@ -40,9 +35,33 @@ def browsefile():
                                  ))
 
 
+def browsefilesha256():
+    sha256output.set(askopenfilename(initialdir="/",
+                                     filetypes=(("Text File", "*.txt"),
+                                                ("All Files", "*.*")),
+                                     title="選擇文件"
+                                     ))
+
+
 def sha_one():
-    print(hash_obj, estr)
+    hash_obj = filename.get()
+    sha1 = hashlib.sha1(hash_obj.encode())
+    estr = sha1.hexdigest()
+    estr1 = estr.encode("utf-8")
+    estr2 = estr1.decode("utf-8")
+    print(hash_obj, "SHA 1 哈希計算結果: ", estr)
     box.showinfo("SHA 1 哈希計算結果", estr1)
+
+
+def sha256():
+    # SHA 256:
+    hash_obj = filename.get()
+    sha256 = hashlib.sha256(hash_obj.encode())
+    sha256str = sha256.hexdigest()
+    sha256str1 = sha256str.encode("utf-8")
+    sha256str2 = sha256str1.decode("utf-8")
+    print(hash_obj, "SHA 256 哈希計算結果: ", sha256str)
+    box.showinfo("SHA 256 哈希計算結果", sha256str)
 
 
 def exportData():
@@ -65,7 +84,7 @@ def visitWebsite():
 
 
 window.title("复述校驗")
-window.geometry("650x350+500+150")
+window.geometry("750x450+500+150")
 window.iconphoto(window, PhotoImage(file="icon.png"))
 menu_bar = Menu(window)
 menu_bar.config(bg="white")
@@ -84,15 +103,30 @@ menu_bar.add_cascade(label="關於", menu=about)
 FileLocation = tk.Label(window, text="SHA-1： ", bg="white").place(
     x=12, y=18, width=84, height=24)
 
-entry = tk.Entry(window, textvariable=filename, bg="#FAFAFA").place(
+FileLocationsha256 = tk.Label(window, text="SHA-256: ", bg="white", justify=LEFT).place(
+    x=12, y=50, width=84, height=24)
+
+entry = tk.Entry(window, textvariable=filename, bg="#FAFAFA", justify=LEFT).place(
     x=100, y=18, width=400, height=24)
+
+sha256entry = tk.Entry(window, textvariable=sha256output, bg="#FAFAFA", justify=LEFT).place(
+    x=100, y=50, width=400, height=24)
 
 browse = tk.Button(window, text="瀏覽", command=browsefile)
 browse.place(x=520, y=18, width=50, height=24)
 browse.configure(bg="white")
+
 calculate = tk.Button(window, text="盤算", command=sha_one)
 calculate.place(x=580, y=18, width=57, height=24)
 calculate.configure(bg="white")
+
+browsefileforsha256 = tk.Button(window, text="瀏覽", command=browsefilesha256)
+browsefileforsha256.place(x=520, y=50, width=50, height=24)
+browsefileforsha256.configure(bg="white")
+
+calculatesha256 = tk.Button(window, text="盤算", command=sha256)
+calculatesha256.place(x=580, y=50, width=57, height=24)
+calculatesha256.configure(bg="white")
 
 window.config(menu=menu_bar)
 window.mainloop()
