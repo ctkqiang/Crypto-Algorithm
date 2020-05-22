@@ -1,4 +1,3 @@
-import os
 import hashlib
 import tkinter as tk
 from tkinter import *
@@ -6,6 +5,7 @@ from tkinter import messagebox as box
 import tkinter.font as font
 from tkinter.filedialog import askopenfilename
 from tkinter import filedialog as tkFileDialog
+import webbrowser as webservice
 
 window = Tk()
 window.resizable(width=False, height=False)
@@ -115,7 +115,7 @@ def aboutDeveloper():
 
 
 def visitWebsite():
-    os.system("start https://johnmelodyme.github.io/")
+    webservice.open("https://johnmelodyme.github.io/")
 
 
 window.title("复述校驗")
