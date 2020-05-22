@@ -1,123 +1,15 @@
 {
-  // Use IntelliSense to learn about possible attributes.
-  // Hover to view descriptions of existing attributes.
-  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
-  "version": "0.2.0",
-  "configurations": [
-    {
-      "name": "Python: Current File",
-      "type": "python",
-      "request": "launch",
-      "program": "${file}",
-      "console": "integratedTerminal"
-    },
-    {"name":"External Python: Current File","type":"python","request":"launch","program":"${file}","console":"externalTerminal"}
-    {
-      "name": "{Ruby} Debug Local File",
-      "type": "Ruby",
-      "request": "launch",
-      "program": "${workspaceRoot}/main.rb"
-    },
-    {
-      "name": "(gdb) Launch",
-      "type": "cppdbg",
-      "request": "launch",
-      "program": "enter program name, for example ${workspaceFolder}/diffie_hellman/a.exe",
-      "args": [],
-      "stopAtEntry": false,
-      "cwd": "${workspaceFolder}",
-      "environment": [],
-      "externalConsole": false,
-      "MIMode": "gdb",
-      "miDebuggerPath": "/path/to/gdb",
-      "setupCommands": [
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
         {
-          "description": "Enable pretty-printing for gdb",
-          "text": "-enable-pretty-printing",
-          "ignoreFailures": true
+            "name": "Python: Current File",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal"
         }
-      ]
-    },
-    {
-      "type": "java",
-      "name": "CodeLens (Launch) - DiffieHellmanClient",
-      "request": "launch",
-      "mainClass": "diffie_hellman.DiffieHellmanClient",
-      "projectName": "CryptoJava_6f15a5dc"
-    },
-    {
-      "type": "java",
-      "name": "CodeLens (Launch) - DiffieHellmanServer",
-      "request": "launch",
-      "mainClass": "diffie_hellman.DiffieHellmanServer",
-      "projectName": "CryptoJava_6f15a5dc"
-    },
-    {
-      "type": "java",
-      "name": "CodeLens (Launch) - CryptographyProvider",
-      "request": "launch",
-      "mainClass": "CryptographyProvider",
-      "projectName": "CryptoJava_6f15a5dc"
-    },
-    {
-      "type": "java",
-      "name": "CodeLens (Launch) - aescrypto",
-      "request": "launch",
-      "mainClass": "src.encryption.aescrypto",
-      "projectName": "CryptoJava_6f15a5dc"
-    },
-    {
-      "name": "CLang (gdb) Launch",
-      "type": "cppdbg",
-      "request": "launch",
-      "program": "enter program name, for example ${workspaceFolder}/a.exe",
-      "args": [],
-      "stopAtEntry": false,
-      "cwd": "${workspaceFolder}",
-      "environment": [],
-      "externalConsole": false,
-      "MIMode": "gdb",
-      "miDebuggerPath": "/path/to/gdb",
-      "setupCommands": [
-        {
-          "description": "Enable pretty-printing for gdb",
-          "text": "-enable-pretty-printing",
-          "ignoreFailures": true
-        }
-      ]
-    },
-    {
-      "name": "Dart -- Debug",
-      "type": "dart",
-      "request": "launch",
-      "program": "bin/main.dart"
-    },
-    {
-      "type": "java",
-      "name": "CodeLens (Launch) - __SHA_512_Encrypt",
-      "request": "launch",
-      "mainClass": "src.encryption.__SHA_512_Encrypt",
-      "projectName": "CryptoJava_6f15a5dc"
-    },
-    {
-      "type": "java",
-      "name": "Java Debug  Current File",
-      "request": "launch",
-      "mainClass": "${file}"
-    },
-    {
-      "type": "java",
-      "name": "Java Debug (Launch) -__main<CryptoJava_6f15a5dc>",
-      "request": "launch",
-      "mainClass": "src.__main",
-      "projectName": "CryptoJava_6f15a5dc"
-    },
-    {
-      "type": "java",
-      "name": "External Oracle Java Debug  Current File",
-      "request": "launch",
-      "console": "externalTerminal",
-      "mainClass": "${file}"
-    }
-  ]
+    ]
 }
