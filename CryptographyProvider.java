@@ -14,7 +14,7 @@ public class CryptographyProvider {
             __info = __provider[i].getInfo();
             __version = __provider[i].getVersion();
             System.out.println("Providers [" + i + "] ==>" + "" + __name + "[" 
-            + __version + "]" + " " + __info);
+            + __version + "]" + " " + "\n" +__info);
         }
     }
 }
