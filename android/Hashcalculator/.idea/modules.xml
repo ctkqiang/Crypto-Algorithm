@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Hash Calculator.iml" filepath="$PROJECT_DIR$/Hash Calculator.iml" group="Hash Calculator" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Hashcalculator.iml" filepath="$PROJECT_DIR$/.idea/Hashcalculator.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="Hash Calculator/app" />
     </modules>
   </component>

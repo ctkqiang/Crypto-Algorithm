@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Hash Calculator</string>
+<<<<<<< HEAD
+=======
+    <string name="output">{output}</string>
+    <string name="input">Enter String</string>
+    <string name="send">Calculate Hashes</string>
+>>>>>>> From-My-Macbook
 </resources>
