@@ -5,6 +5,26 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "type": "java",
+            "name": "CodeLens (Launch) - CryptographyProvider",
+            "request": "launch",
+            "mainClass": "CryptographyProvider",
+            "projectName": "CryptoJava_236cc2fd"
+        },
+        {
+            "type": "java",
+            "name": "Java Debug (Launch) - External Terminal",
+            "request": "launch",
+            "console": "externalTerminal",
+            "mainClass": ""
+        },
+        {
+            "type": "java",
+            "name": "DJava",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
             "name": "Dart",
             "type": "dart",
             "request": "launch",
