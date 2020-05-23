@@ -1,4 +1,5 @@
 ; Build Installation
+; THis is an installer for Windows Machine
 
 [Setup]
 AppName=哈希計算器
@@ -7,7 +8,7 @@ WizardStyle=modern
 DefaultDirName={autopf}\哈希計算器
 DefaultGroupName=哈希計算器
 UninstallDisplayIcon={app}\哈希計算器.exe
-Compression=lzma2
+Compression=lzma2∑
 SolidCompression=yes
 ;OutputDir=userdocs:Inno Setup Examples Output
 
