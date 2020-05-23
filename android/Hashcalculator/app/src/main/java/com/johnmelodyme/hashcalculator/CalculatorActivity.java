@@ -1,11 +1,11 @@
 package com.johnmelodyme.hashcalculator;
 
-<<<<<<< HEAD
+
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.EditText;
-=======
+
 import androidx.appcompat.R;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -23,25 +23,22 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
 import static com.johnmelodyme.hashcalculator.CalculatorActivity.SHA256.getSHA;
->>>>>>> From-My-Macbook
+
 
 public class CalculatorActivity extends AppCompatActivity {
     public static final String TAG = "HashCalculator";
     private EditText __plainTextInput;
-<<<<<<< HEAD
-=======
+
     private TextView __output;
     private Button __send;
->>>>>>> From-My-Macbook
+
 
     private void __init__declaration() {
         // refer : https://www.geeksforgeeks.org/sha-256-hash-in-java/
         __plainTextInput = findViewById(R.id.plaintextinput);
-<<<<<<< HEAD
-=======
+
         __output = findViewById(R.id.output);
         __send = findViewById(R.id.btn_send);
->>>>>>> From-My-Macbook
     }
 
     @Override
@@ -50,8 +47,6 @@ public class CalculatorActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Log.d(TAG, "Starting  " + CalculatorActivity.class.getSimpleName());
         __init__declaration();
-<<<<<<< HEAD
-=======
 
         __send.setOnClickListener(new View.OnClickListener() {
             @SuppressLint("SetTextI18n")
@@ -88,6 +83,5 @@ public class CalculatorActivity extends AppCompatActivity {
             hexString.insert(0, '0');
         }
         return hexString.toString();
->>>>>>> From-My-Macbook
     }
 }

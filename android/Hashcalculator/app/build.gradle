@@ -6,11 +6,11 @@ android {
 
     defaultConfig {
         applicationId "com.johnmelodyme.hashcalculator"
-<<<<<<< HEAD
+
         minSdkVersion 22
-=======
+
         minSdkVersion 21
->>>>>>> From-My-Macbook
+
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"

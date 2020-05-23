@@ -17,17 +17,13 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
             <EditText
                 android:id="@+id/plaintextinput"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-<<<<<<< HEAD
-                android:ems="10"
-                android:inputType="textPersonName"
-                android:text="Name" />
-=======
+
                 android:layout_marginStart="12dp"
                 android:layout_marginTop="12dp"
                 android:layout_marginEnd="12dp"
@@ -35,36 +31,31 @@
                 android:ems="10"
                 android:inputType="textPersonName"
                 android:text="@string/input" />
->>>>>>> From-My-Macbook
+
 
             <TextView
                 android:id="@+id/output"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-<<<<<<< HEAD
-                android:text="TextView" />
-=======
+
                 android:layout_marginStart="12dp"
+
                 android:layout_marginTop="12dp"
                 android:layout_marginEnd="12dp"
                 android:layout_marginBottom="12dp"
                 android:scrollbars="vertical"
                 android:text="@string/output" />
->>>>>>> From-My-Macbook
+
 
             <Button
                 android:id="@+id/btn_send"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-<<<<<<< HEAD
-                android:text="Button" />
-=======
                 android:layout_marginStart="12dp"
                 android:layout_marginTop="12dp"
                 android:layout_marginEnd="12dp"
                 android:layout_marginBottom="12dp"
                 android:text="@string/send" />
->>>>>>> From-My-Macbook
         </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
