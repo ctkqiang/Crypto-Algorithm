@@ -1,5 +1,6 @@
 package com.johnmelodyme.hashcalculator;
 
+import androidx.appcompat.R;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
